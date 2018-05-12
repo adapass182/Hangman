@@ -9,7 +9,7 @@ class GuessArea extends PureComponent {
   render() {
     return (
       <form className="guess-area">
-        <input type="text" name="Guess a letter..."/><Button name="Submit" />
+        <input type="text" placeholder="Guess a letter..." maxlength="1"/><Button name="Submit" />
       </form>
     )
   }
