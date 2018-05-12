@@ -14,7 +14,7 @@ class App extends Component {
       <div className="App">
         <h1 className="app-title">Hangman</h1>
         <GuessArea />
-        <SecretWord secretword={randomWord()}/>
+        <SecretWord />
         <WrongCount />
         <NewGame />
       </div>
