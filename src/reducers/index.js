@@ -1,8 +1,8 @@
-import word from './wordToGuess_reducer'
+import secretWord from './wordToGuess_reducer'
 import guess from './lettersGuessed_reducer'
 
 
 export default {
-  word,
+  secretWord,
   guess
 }

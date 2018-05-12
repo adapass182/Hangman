@@ -9,5 +9,6 @@ export const newGame = () => {
 export const makeGuess = () => {
   return {
     type: MAKE_GUESS
+    payload: 
   }
 }
