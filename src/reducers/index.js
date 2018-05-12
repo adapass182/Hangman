@@ -1,8 +1,8 @@
-import wordToGuess_reducer from './wordToGuess_reducer'
-import lettersGuessed_reducer from './lettersGuessed_reducer'
+import word from './wordToGuess_reducer'
+import guess from './lettersGuessed_reducer'
 
 
 export default {
-  wordToGuess_reducer,
-  lettersGuessed_reducer
+  word,
+  guess
 }

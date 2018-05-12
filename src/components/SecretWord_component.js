@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 
-export default class SecretWord extends PureComponent {
+class SecretWord extends PureComponent {
   state = {}
 
   render() {
@@ -13,3 +13,11 @@ export default class SecretWord extends PureComponent {
     )
   }
 }
+
+const mapStateToProps = (reduxState) => {
+  return {
+    word: reduxState.word
+  }
+}
+
+export default connect(mapStateToProps)(SecretWord)

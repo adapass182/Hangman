@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 import Button from './Button_component'
 
-export default class GuessArea extends PureComponent {
+class GuessArea extends PureComponent {
   state = {}
 
   render() {
@@ -14,3 +14,11 @@ export default class GuessArea extends PureComponent {
     )
   }
 }
+
+const mapStateToProps = (reduxState) => {
+  return {
+    guess: reduxState.guess
+  }
+}
+
+export default connect(mapStateToProps)(GuessArea)
