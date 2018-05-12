@@ -4,7 +4,6 @@ import { connect } from 'react-redux'
 import Button from './Button_component'
 
 class GuessArea extends PureComponent {
-  state = {}
 
   render() {
     return (
@@ -21,4 +20,8 @@ const mapStateToProps = (reduxState) => {
   }
 }
 
-export default connect(mapStateToProps)(GuessArea)
+const mapDispatchToProps = () => {
+
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(GuessArea)

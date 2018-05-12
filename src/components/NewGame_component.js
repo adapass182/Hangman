@@ -3,14 +3,11 @@ import { connect } from 'react-redux'
 
 import Button from './Button_component'
 
-export default class NewGame extends PureComponent {
-  state = {}
+export default class NewGameButton extends PureComponent {
 
   render() {
     return (
-      <form className="new-game">
-        <Button name="New game" />
-      </form>
+      <Button name="New game" />
     )
   }
 }

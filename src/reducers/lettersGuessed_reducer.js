@@ -1,6 +1,9 @@
-
-
-export default (state = {}, { type, payload } = {}) => {
+export default (state = [], { type, payload } = {}) => {
   console.log(`Hi! I'm the letters guessed reducer!`)
-  return state
+  switch (type) {
+  case 'MAKE_GUESS':
+    return state + payload
+  default:
+    return state
+  }
 }

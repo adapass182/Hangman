@@ -3,7 +3,7 @@ import './App.css';
 
 import GuessArea from './components/GuessArea_component'
 import SecretWord from './components/SecretWord_component'
-import NewGame from './components/NewGame_component'
+import NewGameButton from './components/NewGame_component'
 import WrongCount from './components/WrongCount_component'
 
 class App extends Component {
@@ -14,7 +14,7 @@ class App extends Component {
         <GuessArea />
         <SecretWord />
         <WrongCount />
-        <NewGame />
+        <NewGameButton />
       </div>
     );
   }
