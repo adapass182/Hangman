@@ -6,9 +6,12 @@ import Button from './Button_component'
 class GuessArea extends PureComponent {
 
   render() {
+
+    const { guess } = this.props
+
     return (
       <form className="guess-area">
-        <input type="text" placeholder="Guess a letter..." maxlength="1"/><Button name="Submit" />
+        <input type="text" placeholder="Guess a letter..." maxlength="1"/>
       </form>
     )
   }
@@ -16,7 +19,7 @@ class GuessArea extends PureComponent {
 
 const mapStateToProps = (reduxState) => {
   return {
-    guess: reduxState.guess
+    guess: reduxState.guessLetter
   }
 }
 

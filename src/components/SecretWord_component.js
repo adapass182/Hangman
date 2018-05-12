@@ -2,24 +2,22 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { showGuess } from '../lib/game'
 
-const placeHolder = [];
-
 class SecretWord extends PureComponent {
 
   render() {
 
-    const { guess } = this.props
+    const { word, guess } = this.props
 
     return (
-      <h2 className="wordToGuess">{showGuess(guess, placeHolder)}</h2>
+      <h2 className="wordToGuess">{showGuess(word, guess)}</h2>
     )
   }
 }
 
 const mapStateToProps = (reduxState) => {
   return {
-    guess: reduxState.secretWord
-
+    word: reduxState.secretWord,
+    guess: reduxState.guessLetter
   }
 }
 

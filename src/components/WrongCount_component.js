@@ -1,12 +1,25 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 
-export default class WrongCount extends PureComponent {
-  state = {}
+import { wrongGuessCount } from '../lib/game'
+
+class WrongCount extends PureComponent {
 
   render() {
+
+    const { word, guess } = this.props
+
     return (
-      <h2 className="wrong-guess-count">Wrong guesses: 0</h2>
+      <h2 className="wrong-guess-count">Wrong guesses: {wrongGuessCount(word, guess)}</h2>
     )
   }
 }
+
+const mapStateToProps = (reduxState) => {
+  return {
+    word: reduxState.secretWord,
+    guess: reduxState.guessLetter
+  }
+}
+
+export default connect(mapStateToProps)(WrongCount)
