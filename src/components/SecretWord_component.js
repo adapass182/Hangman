@@ -16,7 +16,7 @@ class SecretWord extends PureComponent {
 
 const mapStateToProps = (reduxState) => {
   return {
-    word: reduxState.word
+    secretword: reduxState.word
   }
 }
 
