@@ -18,6 +18,10 @@ export const gameFinished = (word, guesses) => {
   return (wrongGuessLimit(word, guesses) || isWinner(word, guesses))
 }
 
+export const randomWord = () => {
+  return wordList[Math.floor(Math.random() * wordList.length)]
+}
+
 export const wordList = [
   // Borrowed from xkcd password generator which borrowed it from wherever
   "ability","able","aboard","about","above","accept","accident","according",
@@ -265,7 +269,3 @@ export const wordList = [
   "year","yellow","yes","yesterday","yet","you","young","younger",
   "your","yourself","youth","zero","zebra","zipper","zoo","zulu"
 ];
-
-export const randomWord = () => {
-  return wordList[Math.floor(Math.random() * wordList.length)]
-}

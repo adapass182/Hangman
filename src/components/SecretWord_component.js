@@ -5,8 +5,11 @@ export default class SecretWord extends PureComponent {
   state = {}
 
   render() {
+
+    const { secretword } = this.props
+
     return (
-      <h2 className="wordToGuess">_ _ _ _ _ _</h2>
+      <h2 className="wordToGuess">{secretword}</h2>
     )
   }
 }
