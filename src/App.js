@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import GuessArea from './components/GuessArea_component'
+import SecretWord from './components/SecretWord_component'
+import NewGame from './components/NewGame_component'
+import WrongCount from './components/WrongCount_component'
+
 class App extends Component {
   render() {
     return (
       <div className="App">
         <h1 className="app-title">Hangman</h1>
-        <form className="guess-area">
-          <input type="text" name="Guess a letter..."/><input type="submit" value="Submit"/><h2 className="wrong-guess-count">Wrong guesses: 0</h2>
-        </form>
-        <h2 className="wordToGuess">_ _ _ _ _ _</h2>
-        <form className="new-game">
-          <input type="submit" value="New game" />
-        </form>
+        <GuessArea />
+        <SecretWord />
+        <WrongCount />
+        <NewGame />
       </div>
     );
   }
