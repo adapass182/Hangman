@@ -12,9 +12,9 @@ class WrongCount extends PureComponent {
     if (wrongGuessCount(word, guess) < 6 && wrongGuessCount(word, guess) > 0)
       holder = "Wrong guesses: " + wrongGuessCount(word, guess)
     else if (wrongGuessCount(word, guess) >= 6)
-      holder = "You lose!"
+      holder = ""
     return (
-      <h2 className="wrong-guess-count">{ holder }</h2>
+      <h3 className="wrong-guess-count">{ holder }</h3>
     )
   }
 }
