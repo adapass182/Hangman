@@ -18,12 +18,8 @@ class App extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    console.log("I'm the handle submit function!")
-  }
-
-  handleChange = (e) => {
-    console.log("I'm the handle change function!" + e.target.value)
-    this.props.makeGuess(e.target.value)
+    console.log("I'm the handle submit function!" + e.target[0].value)
+    this.props.makeGuess(e.target[0].value)
   }
 
   render() {
