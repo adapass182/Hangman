@@ -9,6 +9,7 @@ class WrongCount extends PureComponent {
   render() {
     const { word, guess } = this.props
     let holder = ""
+    //NOTE: I'm not sure the below makes sense - need to check if wrongGuessCount returns an integer or a boolean
     if (wrongGuessCount(word, guess) < 6 && wrongGuessCount(word, guess) > 0)
       holder = "Wrong guesses: " + wrongGuessCount(word, guess)
     else if (wrongGuessCount(word, guess) >= 6)
