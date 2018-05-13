@@ -6,10 +6,14 @@ class SecretWord extends PureComponent {
 
   render() {
 
-    const { word, guess } = this.props
-
+    const { word, guess, display } = this.props
+    let holder
+    if (display === false)
+      holder = `Press "New game" to get started!`
+    else
+      holder = showGuess(word, guess)
     return (
-      <h2 className="wordToGuess">{showGuess(word, guess)}</h2>
+      <h3 className="wordToGuess">{ holder }</h3>
     )
   }
 }
@@ -17,7 +21,8 @@ class SecretWord extends PureComponent {
 const mapStateToProps = (reduxState) => {
   return {
     word: reduxState.secretWord,
-    guess: reduxState.guessLetter
+    guess: reduxState.guessLetter,
+    display: reduxState.wordDisplay
   }
 }
 
