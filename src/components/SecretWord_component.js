@@ -9,7 +9,7 @@ class SecretWord extends PureComponent {
     const { word, guess, display } = this.props
     let holder
     if (display === false)
-      holder = `Press "New game" to get started!`
+      holder = `Ready to get started?`
     else if (gameFinished(word, guess))
       if (wrongGuessLimit(word, guess))
         holder = "You lost! The answer was: " + word
