@@ -20,6 +20,7 @@ class App extends Component {
     e.preventDefault()
     console.log("I'm the handle submit function!" + e.target[0].value)
     this.props.makeGuess(e.target[0].value)
+    e.target[0].value = ""
   }
 
   render() {
