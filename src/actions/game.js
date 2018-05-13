@@ -8,8 +8,9 @@ export const newGame = () => {
   }
 }
 
-export const makeGuess = () => {
+export const makeGuess = (guessedLetter) => {
   return {
-    type: MAKE_GUESS
+    type: MAKE_GUESS,
+    payload: guessedLetter
   }
 }

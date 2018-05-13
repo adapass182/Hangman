@@ -1,3 +1,8 @@
 export default (state = [], { type, payload } = {}) => {
-  return state
+  switch (type) {
+  case 'MAKE_GUESS':
+    return state.concat(payload)
+  default:
+    return state = []
+  }
 }
