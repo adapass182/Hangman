@@ -1,3 +1,8 @@
 export default (state = "", { type, payload } = {}) => {
-  return state
+  switch (type) {
+  case 'NEW_GAME':
+    return payload
+  default:
+    return state
+  }
 }
